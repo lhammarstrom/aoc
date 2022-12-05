@@ -62,9 +62,6 @@ chunk_size = 3
 for i in range(0, len(lines), chunk_size):
     chunks.append(lines[i:i+chunk_size])
 
-    # sum += letters.index(
-    # list(set(line[:len(line)//2]) & set(line[len(line)//2:]))[0])+1
-
 sum = 0
 for chunk in chunks:
     first = set(chunk[0])

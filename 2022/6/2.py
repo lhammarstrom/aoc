@@ -8,13 +8,10 @@ for line in lines:
     characters = list(line)
 
     for i in range(0, len(characters)):
-        if (i >= 3):
-            subset = ''
-            for j in range(0, subset_length):
-                subset += characters[i-j]
-
+        if (i >= subset_length):
+            subset = ''.join(characters[i-subset_length:i])
             if (len(set(subset)) == len(subset)):
-                markers.append(i+1)
+                markers.append(i)
                 break
 
 print(markers)
